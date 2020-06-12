@@ -1,0 +1,12 @@
+/out/
+!/out/.dummy
+/.tmp/
+!/.tmp/.dummy
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.gz
+*.toc
+*.ent

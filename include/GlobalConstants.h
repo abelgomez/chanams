@@ -1,0 +1,26 @@
+#pragma once
+
+#define DEFAULT_INTERIOR_NAME "chanams-interior"
+#define DEFAULT_INTERIOR_FQN "chanams-interior.local"
+#define DEFAULT_LISTENING_PORT 1883
+#define DEFAULT_EXTERIOR_NAME "chanams-exterior"
+
+#define DEFAULT_TIME_BETWEN_UPDATES 4
+#define DEFAULT_TIMEOUT 9
+#define DEFAULT_BATTERY_VCC_THRESHOLD 4.72
+
+#define DEFAULT_TIMEZONE "Europe/Madrid"
+#define DEFAULT_START_QUIET_HOURS 23
+#define DEFAULT_START_QUIET_MINUTES 0
+#define DEFAULT_END_QUIET_HOURS 9
+#define DEFAULT_END_QUIET_MINUTES 0
+
+#define INTERIOR_CONFIG_PORTAL_NAME "Config. Interior"
+#define EXTERIOR_CONFIG_PORTAL_NAME "Config. Exterior"
+
+#define TOPIC_CHANAMS "chanams"
+#define TOPIC_CHANAMS_DEPOSIT      TOPIC_CHANAMS "/deposit-full"
+#define TOPIC_CHANAMS_VCC          TOPIC_CHANAMS "/battery-vcc"
+#define TOPIC_CHANAMS_TEMPERATURE  TOPIC_CHANAMS "/temperature"
+#define TOPIC_CHANAMS_HUMIDITY     TOPIC_CHANAMS "/humidity"
+#define TOPIC_CHANAMS_HEAT_INDEX   TOPIC_CHANAMS "/heat-index"

@@ -1,0 +1,59 @@
+\section{Guía de inicio rápido}
+\label{sec:inicio-rapido}
+
+El \CMS requiere una configuración mínima para poder emplearse por primera vez.
+Como mínimo, es necesario que se establezca el nombre y la contraseña de la red wifi a la que los módulos se conectarán para que puedan comunicarse.
+Esta configuración debe realizarse tanto en el \MIE como en el \MEE.
+
+\subsection{Configuración rápida del módulo interior}
+
+El \MIE debe configurarse primero siguiendo los siguiente pasos:
+
+\begin{enumeratecompact}
+
+\item Mientras pulsa el botón multifunción \circled{I8}, conecte la alimentación USB \circled{I6} del \MI. Cuando la luz de notificación de configuración \circled{I3} se encienda de forma fija y en la pantalla LCD \circled{I1} aparezca el texto \emph{Conecta a Config.~Interior} (ver figura~\ref{fig:screen-config}, página \pageref{fig:screen-config}), suelte el botón \circled{I8}.
+
+Si el mensaje \emph{Conecta a Config.~Interior} no aparece en la pantalla LCD, desconecte la alimentación y comience de nuevo. Alternativamente, en lugar de desconectar y conectar la alimentación USB \circled{I6}, puede presionar el botón de reinicio \circled{I5} mientras pulsa el botón multifunción \circled{I8}.
+
+\item Con la ayuda de un dispositivo móvil o un ordenador con conexión wifi, busque las redes wifi disponibles y conecte a la red llamada \emph{Config.~Interior} (figura~\ref{fig:interior-select-wifi}, página~\pageref{fig:interior-select-wifi}).
+
+\item En caso de que su dispositivo no le rediriga automáticamente a la página de configuración del \MI, despliegue el área de notificaciones de su dispositivo, y pulse la opción \emph{Iniciar sesión en red Wi-Fi ``Config.~Interior''} (figura~\ref{fig:interior-captive-portal-notification}, página~\pageref{fig:interior-captive-portal-notification}).
+
+\item Seleccione la opción \emph{Configurar} (figura~\ref{fig:interior-menu}, página~\pageref{fig:interior-menu}).
+
+\item Tras unos segundos, se mostrarán la lista de redes wifi detectadas por el \MI. Pulsando sobre el numbre de una red, se rellenará el campo \emph{SSID} (ver figura~\ref{fig:interior-config}). A continuación, escriba la contraseña de la red wifi seleccionada en el campo \emph{password}. Aplique los cambios pulsando el botón \emph{Guardar} al final de la página de configuración.
+
+\item Se mostrará el mensaje \emph{Configuración guardada. Conectando a la red\ldots} y el módulo se reiniciará en unos segundos. El \MI intentará conectarse automáticamente a la red configurada (ver figura~\ref{fig:screen-conn-process}, página~\pageref{fig:screen-conn-process}) y se quedará a la espera de que el \MEE esté listo (la luz de notificación de configuración \circled{I3} parpadeará). En caso de error (figura~\ref{fig:screen-conn-failed}, página~\pageref{fig:screen-conn-failed}), pruebe de nuevo desde el paso 1.
+
+\end{enumeratecompact}
+
+
+\subsection{Configuración rápida del módulo exterior}
+
+El \MEE se debe configurar en segundo lugar siguiendo los pasos a continuación. El proceso de configuración del \MEE es similar al del \MIE:
+
+\begin{enumeratecompact}
+
+\item Asegúrese de que el \ME está apagado (interruptor de encendido \circled{E2} en posición \off).
+
+\item Mientras pulsa el botón de configuración \circled{E5} con ayuda de alguna herramienta de punta estrecha y alargada, conecte el \ME moviendo el interruptor de encendido \circled{E2} a la posición \on.
+
+\item Con la ayuda de un dispositivo móvil o un ordenador con conexión wifi, busque las redes wifi disponibles y conecte a la red llamada \emph{Config.~Exterior} (figura~\ref{fig:exterior-select-wifi}).
+
+\item En caso de que su dispositivo no le rediriga automáticamente a la página de configuración del \ME, despliegue el área de notificaciones de su dispositivo y pulse la opción \emph{Iniciar sesión en red Wi-Fi ``Config.~Exterior''} (figura~\ref{fig:exterior-captive-portal-notification}).
+
+\item Seleccione la opción \emph{Configurar} (ver figura~\ref{fig:exterior-menu}).
+
+\item Tras unos segundos, se mostrarán las redes wifi detectadas por el \ME. Pulsando sobre el numbre de una red, se rellenará el campo \emph{SSID} (ver figura~\ref{fig:exterior-config}). A continuación, escriba la contraseña de la red wifi seleccionada en el campo \emph{password}. Aplique los cambios pulsando el botón \emph{Guardar} al final de la página de configuración.
+
+\item Se mostrará el mensaje \emph{Configuración guardada. Conectando a la red\ldots} y el sistema se reiniciará en unos segundos. El \ME se conectará automáticamente a la red configurada y se sincronizará con el \MIE: la luz de notificación de configuración \circled{I3} dejará de papadear y se apagará, y en su lugar, se encenderá la luz de notificación de conexión \circled{I4}. En caso de error, pruebe de nuevo desde el paso 1.
+
+\end{enumeratecompact}
+
+
+
+\tipbegin{Configuración avanzada}
+El \CMS permite configurar diversos parámetros de funcionamiento. Revise la sección~\ref{sec:gestion} para ver opciones de gestión y configuración avanzadas.
+\tipend
+
+

@@ -1,0 +1,95 @@
+\documentclass[twoside]{report}
+
+
+% Document Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{util/tables}
+\input{util/abbrev}
+\input{util/extra-packages}
+\input{util/listings}
+\input{util/diagrams}
+\input{util/preprint}
+
+% Document Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{%
+  Chana Monitoring System
+}
+
+\author{
+  Abel Gómez
+}
+\subtitlea{
+  Manual de usuario
+}
+\subtitleb{
+  Versión 1.0
+}
+\date{
+  \today
+}
+\cover{
+  images/template/cover
+}
+\back{
+  images/template/back
+}
+\copyrightnotice{Abel Gómez}
+
+% Begin document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Title page
+\maketitle
+
+% Table of Contents
+\tableofcontents
+
+% Acronyms
+%\input{sections/00-acronyms}
+
+% Contents
+\input{sections/10-intro}
+%\input{sections/20-controles}
+\input{sections/30-inicio-rapido}
+\input{sections/40-funcionamiento}
+\input{sections/50-configuracion}
+
+%\input{sections/20-example-section}
+
+\appendix
+
+\cleardoublepage
+
+\input{sections/aa-componentes-interior}
+\input{sections/ab-diseno-interior}
+\input{sections/ba-componentes-exterior}
+\input{sections/bb-diseno-exterior}
+
+% % Biliography
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% \cleardoublepage
+% \bibliographystyle{plain}
+% \bibliography{bib/bibliography}
+% 
+% % Clarifications
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% % Print them only if the notes package is loaded (c@pagenode exists)
+% % and there are notes defined within the document (pnotesavechap > 0)
+% 
+% \makeatletter
+% \ifcsname c@pagenote\endcsname
+% \ifthenelse{\value{pnotesavechap}>0}{\cleardoublepage\printnotes}{}
+% \fi
+% \makeatother
+
+
+\makeback
+
+\end{document}          

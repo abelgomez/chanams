@@ -1,0 +1,48 @@
+\usepackage{xspace}
+\usepackage{lipsum}
+\usepackage{xcolor}
+
+% Short verbatim can be formatted using \!text!: e.g., \!boolean!
+\def\!#1!{\texttt{#1}}
+
+% Acronyms should be placed in angled brackets: e.g., \<UML>
+\def\<#1>{\lowercase{\textsc{#1}}}
+
+% Abbreviations for references
+\newcommand{\Figure}{Figure\@\xspace}
+\newcommand{\Figures}{Figures\@\xspace}
+\newcommand{\Table}{Table\@\xspace}
+\newcommand{\Tables}{Tables\@\xspace}
+\newcommand{\Section}{Section\@\xspace}
+\newcommand{\Sections}{Sections\@\xspace}
+\newcommand{\Appendix}{Appendix\@\xspace}
+\newcommand{\Appendices}{Appendices\@\xspace}
+\newcommand{\CMS}{\emph{Chana Monitoring System}\@\xspace}
+\newcommand{\MI}{\textit{módulo interior}\@\xspace}
+\newcommand{\MIE}{\emph{módulo interior}\@\xspace}
+\newcommand{\ME}{\textit{módulo exterior}\@\xspace}
+\newcommand{\MEE}{\emph{módulo exterior}\@\xspace}
+
+% Common abbrev. are set as commands to ensure proper spacing after the dot
+\newcommand{\ie}{i.e.\@\xspace}
+\newcommand{\Ie}{I.e.\@\xspace}
+\newcommand{\cf}{cf.\@\xspace}
+\newcommand{\Cf}{Cf.\@\xspace}
+\newcommand{\eg}{e.g.\@\xspace}
+\newcommand{\Eg}{E.g.\@\xspace}
+\newcommand{\etal}{et al.\@\xspace}
+\newcommand{\etc}{etc.\@\xspace}
+
+% Other
+\newcommand{\on}{\raisebox{-1pt}{\hspace{-2pt}\textlarger[2]{$\shortmid$}}\hspace{-2pt}\@\xspace}
+\newcommand{\off}{$\medcircle$\@\xspace}
+
+% Sample text
+%\newcommand{\stext}[1][1-2]{\textcolor{gray!80!red}{\lipsum[#1]}}
+\newcommand{\stext}[1][1-2]{\lipsum[#1]}
+
+% Sample paragraph
+\newcommand{\spar}{\stext[1]}
+
+% Short sample paragraph
+\newcommand{\sspar}{\stext[66]}
