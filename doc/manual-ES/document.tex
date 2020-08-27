@@ -1,5 +1,10 @@
 \documentclass[twoside]{report}
-
+\usepackage[spanish,es-noshorthands]{babel}
+\addto\captionsspanish{
+\renewcommand{\figurename}{FIGURA}
+\renewcommand{\tablename}{TABLA}
+\renewcommand{\contentsname}{ÍNDICE}
+}
 
 % Document Configuration
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -15,7 +20,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{%
-  Chana Monitoring System
+  Chana Monitoring System%
 }
 
 \author{
@@ -54,12 +59,11 @@
 
 % Contents
 \input{sections/10-intro}
-%\input{sections/20-controles}
 \input{sections/30-inicio-rapido}
 \input{sections/40-funcionamiento}
 \input{sections/50-configuracion}
+\input{sections/60-resolucion-problemas}
 
-%\input{sections/20-example-section}
 
 \appendix
 
@@ -69,6 +73,8 @@
 \input{sections/ab-diseno-interior}
 \input{sections/ba-componentes-exterior}
 \input{sections/bb-diseno-exterior}
+\input{sections/ca-descarga}
+\input{sections/da-topics}
 
 % % Biliography
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

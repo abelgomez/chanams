@@ -24,12 +24,11 @@ Para activar la interfaz de gestion del \MIE se hace uso del botón multifunció
   \label{fig:screen-config}
 \end{figure}
 
-
 Si el mensaje \emph{Conecta a Config.~Interior} no aparece en la pantalla LCD, comience de nuevo.
 
 \item Con la ayuda de un dispositivo móvil o un ordenador con conexión wifi, busque las redes wifi disponibles y conecte a la red llamada \emph{Config.~Interior} (figura~\ref{fig:interior-select-wifi}, página~\pageref{fig:interior-select-wifi}).
 
-\item En caso de que su dispositivo no le rediriga automáticamente a la página de configuración del \MI, despliegue el área de notificaciones de su dispositivo y pulse la opción \emph{Iniciar sesión en red Wi-Fi ``Config.~Interior''} (figura~\ref{fig:interior-captive-portal-notification}, página~\pageref{fig:interior-captive-portal-notification}).
+\item En caso de que su dispositivo no le rediriga automáticamente a la página de configuración del \MI, despliegue el área de notificaciones de su dispositivo y pulse la opción \emph{Iniciar sesión en red Wi-Fi ``Config.~Interior''} (figura~\ref{fig:interior-captive-portal-notification}, pá\-gi\-na~\pageref{fig:interior-captive-portal-notification}).
 
 \item El menú mostrado en la figura~\ref{fig:interior-menu} aparecerá en su pantalla.
 
@@ -41,7 +40,7 @@ En el caso del \MEE, la activación de la interfaz de gestión se realiza median
 
 \item Asegúrese de que el \ME está apagado (interruptor de encendido \circled{E2} en posición \off).
 
-\item Mientras pulsa el botón de configuración \circled{E5} con ayuda de alguna herramienta de punta estrecha y alargada, conecte el \ME moviendo el interruptor de encendido \circled{E2} a la  posición \on.
+\item Mientras pulsa el botón de configuración \circled{E5} con ayuda de alguna herramienta de punta estrecha y alargada, conecte el \ME moviendo el interruptor de encendido \circled{E2} a la  posición \on. La luz de notificación de actividad \circled{E1} se encenderá momentáneamente. 
 
 \item Con la ayuda de un dispositivo móvil o un ordenador con conexión wifi, busque las redes wifi disponibles y conecte a la red llamada \emph{Config.~Exterior} (figura~\ref{fig:exterior-select-wifi}).
 
@@ -50,38 +49,6 @@ En el caso del \MEE, la activación de la interfaz de gestión se realiza median
 \item El menú mostrado en la figura~\ref{fig:exterior-menu} aparecerá en su pantalla.
 
 \end{enumeratecompact}
-
-\subsection{Opciones de gestión}
-
-La figura~\ref{fig:menu} muestra las opciones de gestión que ofrecen ambos módulos:
-
-\begin{descriptioncompact}
-
-\item[Configurar] --- Permite establecer diversos parámetros de funcionamiento, como nombre del host, frecuencia de actualizaciones, horario de silencion, \etc Las opciones de configuración se describen en la sección~\ref{sec:config}.
-
-\item[Actualizar] --- Permite actualizar el firmware de los distintos módulos sin necesidad de conectarlos físicamente a un ordenador mediante una conexión USB. Las opciones de configuración se describen en la sección~\ref{sec:actualizar}.
-
-\item[Información] --- Muestra información básica del sistema y el hardware de los módulos. Las opciones de configuración se describen en la sección~\ref{sec:info}.
-
-\item[Reiniciar] --- Reinicia el sistema sin guardar los cambios. Las opciones de configuración se describen en la sección~\ref{sec:reinicio}.
-
-\end{descriptioncompact}
-
-\subsubsection{Parámetros de configuración}
-\label{sec:config}
-
-\subsubsection{Actualización remota}
-\label{sec:actualizar}
-
-\attbegin{Conexión de datos}
-Para poder acceder a la interfaz de gestión desde un navegador web ---como \textit{Google Chrome}--- desde su dispositivo móvil, es probable que deba desactivar previamente su conexión de datos.
-\attend
-
-\subsubsection{Información}
-\label{sec:info}
-
-\subsubsection{Reinicio}
-\label{sec:reinicio}
 
 \begin{figure}
 \begin{subfigure}{0.49\columnwidth}
@@ -136,6 +103,35 @@ Para poder acceder a la interfaz de gestión desde un navegador web ---como \tex
 \label{fig:menu}
 \end{figure}
 
+\subsection{Opciones de gestión}
+
+La figura~\ref{fig:menu} muestra las opciones de gestión que ofrecen ambos módulos:
+
+\begin{descriptioncompact}
+
+\item[Configurar] --- Permite establecer diversos parámetros de funcionamiento, como nombre del host, frecuencia de actualizaciones, horario de silencio, \etc Las opciones de configuración se describen en la sección~\ref{sec:config}.
+
+\item[Actualizar] --- Permite actualizar el firmware de los distintos módulos sin necesidad de conectarlos físicamente a un ordenador mediante una conexión USB. El proceso de actualización se detalla en la sección~\ref{sec:actualizar}.
+
+\item[Información] --- Muestra información básica del sistema y el hardware de los módulos. La información disponible se describe en la sección~\ref{sec:info}.
+
+\item[Reiniciar] --- Reinicia el sistema sin guardar los cambios. La sección~\ref{sec:reinicio} describe el proceso de reinicio.
+
+\end{descriptioncompact}
+
+Finalmente, en la parte inferior de la figura~\ref{fig:menu} se muestra la información de compilación (fecha y hora) del software del \CMS.
+
+\subsubsection{Parámetros de configuración}
+\label{sec:config}
+
+En esta sección se detallan los diversos parámetros que se pueden configurar tanto para el \MIE como para el \MEE cuando se selecciona en el menú principal la opción \emph{Configurar}.
+
+\importantbegin{Acceso a los parámetros de configuración}
+Sea paciente mientras se carga la página que permite ajustar los parámetros de configuración. Puede tardar unos segundos ya que se deben escanear las redes disponibles al alcance de los módulos.
+\importantend
+
+Las figuras~\ref{fig:interior-config} y \ref{fig:exterior-config} muestran el aspecto que tiene la interfaz de configuración para el \MI y el \ME respectivamente. Cuando se ha terminado de establecer la configuración deseada, es necesario pulsar en el botón \emph{Guardar} que se encuentra al final de la interfaz de configuración. En tal caso, se mostrarán los mensajes de confirmación de la figura~\ref{fig:config-saved} según proceda, y el módulo recién configurado se reiniciará. En caso de no desear guardar los cambios, es posible volver atrás y reiniciar el módulo (ver sección~\ref{sec:reinicio}) sin alterar la configuración previa.
+
 \begin{figure}
 \begin{subfigure}{0.49\columnwidth}
   \centering
@@ -168,9 +164,101 @@ Para poder acceder a la interfaz de gestión desde un navegador web ---como \tex
   \label{fig:exterior-config-saved}
 \end{subfigure}
 \caption{Mensaje de confirmación de configuración guardada en los módulos interior (a) y exterior (b)}
+\label{fig:config-saved}
 \end{figure}
 
 
+\paragraph{Redes disponibles}
+
+Como ya se ha avanzado en la sección~\ref{sec:inicio-rapido}, la sección de \emph{Redes disponibles} permite establecer el nombre y la contraseña de la red wifi a la que se conectará el \CMS. El establecimiento de la configuración de red wifi se hace de forma similar tanto en el \MIE como en el \MEE. 
+
+\paragraph{Parámetros de configuración del \textit{módulo interior}}
+\label{sec:params-interior}
+
+\begin{description}
+
+  \item[Nombre de host] --- Nombre que anunciará el \MIE como su nombre de host. Aquellos dispositivos que soporten el protocolo mDNS podrán resolver la dirección IP del \MI empleando el nombre DNS \texttt{nombre-de-host\allowbreak.\allowbreak\-lo\-cal} (por ejemplo, \texttt{chanams-interior.local}). El nombre de host puede contener únicamente letras mayúsculas (A..Z), minúsculas (a..z), números (0..9) y \mbox{guiones~(-)}.
+  
+  Valor por defecto: \texttt{chanams-interior}
+  
+  \item[Puerto de escucha] --- Puerto de escucha del broker MQTT alojado en el \MIE.
+
+  Valor por defecto: \texttt{1883}
+  
+  \item[Tiempo de espera máximo (minutos)] --- Tiempo máximo en minutos que el \MIE debe esperar entre dos mensajes del \MEE. Cuando dicho tiempo se excede sin que el \MI haya recibido comunicación por parte del \ME, se considerará que la conexión se ha perdido y se disparará la \emph{alarma de conexión perdida} (ver tabla~\ref{tab:luces} y sección~\ref{sec:alarmas}).
+  
+  Valor por defecto: \texttt{16}
+  
+  \tipbegin{Estableciendo un tiempo de espera máximo}
+  Dada la naturaleza del protocolo de comunicación entre el \MEE y el \MIE, no es extraño que la comunicación entre ambos se pierda puntualmente (interferencias, error al conectar a la red wifi, pérdida de mensajes, \etc). Por tanto, se recomienda que el \emph{Tiempo de espera máximo} sea al menos 3 veces (o incluso más) el \emph{Tiempo de espera entre mensajes} del \MEE (ver sección~\ref{sec:params-exterior} a continuación) más un minuto extra.
+  
+  Así, el valor por defecto se calcula como (5 $\times$ 3) $+$ 1 $=$ 16, donde 5 es el \emph{Tiempo de espera entre mensajes}, y 16 el \emph{Tiempo de espera máximo} resultante.
+  
+  En todo caso, el \emph{Tiempo de espera máximo} debe ser inferior al tiempo que puede pasar el depósito exterior sin supervisión y sin rebosar cuando se encuentra cerca de su límite de capacidad.
+  \tipend
+  
+  
+  \item[Umbral de batería baja (voltios)] --- Valor en voltios ---decimales separados por punto (\texttt{.})--- a partir del cual se considerará que la batería del \MEE está baja para lanzar los \emph{avisos de batería baja}.
+  
+  Valor por defecto: \texttt{4.72}
+  
+  \tipbegin{Ajuste del umbral de batería baja}
+  El valor por defecto del \emph{Umbral de batería baja} está ajustado según los datos experimentales recogidos en el anexo~\ref{app:curva-descarga}. No obstante, puede ser deseable tanto incrementar como decrementar este umbral.
+  
+  Por ejemplo, a medida que las baterías se degradan, la caída en el voltaje es más pronunciada y rápida acortando el tiempo entre el \emph{aviso de batería baja} y la \emph{alarma de conexión perdida} (ver sección~\ref{sec:alarmas}). Ajustando este umbral a un valor más alto se puede incrementar el tiempo entre el \emph{aviso} y la \emph{alarma}.
+  
+  Igualmente, con baterías en perfectas condiciones, puede desearse incrementar el tiempo entre el \emph{aviso de batería baja} y la \emph{alarma de conexión perdida} si el \emph{Tiempo de espera entre mensajes} (ver sección~\ref{sec:params-exterior}) se ha establecido a un intervalo muy largo, ya que en tal caso podrían pasar días o semanas entre uno y otro.
+  \tipend
+  
+  \item[Zona horaria] --- Nombre de la zona horaria\footnote{Véase \url{https://en.wikipedia.org/wiki/List_of_tz_database_time_zones} para la lista de zonas horarias estándar.} donde se encuentra instalado el \CMS. Sirve para ajustar automáticamente el reloj interno del \MEE a los horarios de verano e invierno a partir de la hora universal UTC.
+  
+  Valor por defecto: \texttt{Europe/Madrid}
+  
+  \item[Inicio del periodo de silencio (hora)] e~~{\color{main}\uppercase{Inicio del periodo de silencio (minutos)}} --- Estos dos parámetros de configuración permiten establecer la hora y minutos (incluídos) a partir de los cuales el \CMS no emitirá avisos sonoros (ver sección~\ref{sec:alarmas}). 
+  
+  Valor por defecto (hora): \texttt{23}
+  
+  Valor por defecto (minutos): \texttt{0}
+  
+  \item[Fin del periodo de silencio (hora)] y~~{\color{main}\uppercase{Fin del periodo de silencio (minutos)}}~--- Estos dos parámetros de configuración permiten establecer la hora y minutos (excluídos) a partir de los cuales el \CMS emitirá avisos sonoros (ver sección~\ref{sec:alarmas}).
+  
+  Valor por defecto (hora): \texttt{9}
+  
+  Valor por defecto (minutos): \texttt{0}
+  
+  \attbegin{Ejemplo de periodo de silencio}
+  Tomando como referencia los valores por defecto para el \emph{Inicio del periodo de silencio} y el \emph{Fin del periodo de silencio}, el \CMS no emitirá ningún sonido entre las 23:00 y las 08:59.
+  \attend
+\end{description}
+
+\paragraph{Parámetros de configuración del \textit{módulo exterior}}
+\label{sec:params-exterior}
+
+\begin{description}
+
+  \item[Nombre de host] --- Nombre que anunciará el \MEE como su nombre de host. El nombre de host puede contener únicamente letras mayúsculas (A..Z), minúsculas (a..z), números (0..9) y \mbox{guiones~(-)}. Nótese que, aunque los dispositivos que soportan el protocolo mDNS podrían teóricamente resolver la dirección IP del \ME empleando el nombre DNS \texttt{nombre-de-host\allowbreak.\allowbreak\-lo\-cal} (por ejemplo, \texttt{chanams-exterior.local}), en la práctica el \ME pasa la mayor tiempo en estado de reposo y con el enlace wifi desconectado.
+  
+  Valor por defecto: \texttt{chanams-exterior}
+  
+  \item[Nombre o IP del módulo interior] --- Nombre DNS o IP del \MIE. Si se emplea un nombre DNS, dado que el \MEE soporta el protocolo mDNS, puede emplearse el \emph{Nombre de host} que se describe en la sección~\ref{sec:params-interior} añadiéndole el sufijo \texttt{.local}.
+  
+  Valor por defecto: \texttt{chanams-interior.local}
+  
+  \item[Puerto de escucha del módulo interior] --- Puerto de escucha del broker MQTT alojado en el \MIE. Debe conincidir con el \emph{Puerto de escucha} que se describe en la sección~\ref{sec:params-interior}
+
+  Valor por defecto: \texttt{1883}
+  
+  \item[Tiempo de espera entre mensajes (minutos)] --- Tiempo que el \MEE debe permanecer en reposo entre comprobaciones del nivel de depósito del agua y el resto de sensores. A mayor tiempo de espera del \ME, mayor será la duración de la batería.
+  
+  No obstante, ha de considerarse que el \emph{Tiempo de espera entre mensajes} está relacionado con el \emph{Tiempo de espera máximo} (ver sección~\ref{sec:params-interior}), que a su vez debe ser inferior al tiempo máximo que el depósito puede permanecer sin supervisión cuando está cercano a su máxima capacidad. Se recomienda que el \emph{Tiempo de espera entre mensajes} sea al menos 3 veces menor que el \emph{Tiempo de espera entre mensajes}. Esto permitiría la pérdida de 3 mensajes por causas normales entre el \ME y el \MI sin que salten las alarmas. 
+
+  Valor por defecto: \texttt{5}
+   
+\end{description}
+
+
+\subsubsection{Actualización remota}
+\label{sec:actualizar}
 
 \begin{figure}
 \begin{subfigure}{0.49\columnwidth}
@@ -187,6 +275,7 @@ Para poder acceder a la interfaz de gestión desde un navegador web ---como \tex
   \label{fig:exterior-firmware-update}
 \end{subfigure}
 \caption{Actualización del firmware de los módulos interior (a) y exterior (b)}
+\label{fig:firmware-update}
 \end{figure}
 
 \begin{figure}
@@ -211,9 +300,51 @@ Para poder acceder a la interfaz de gestión desde un navegador web ---como \tex
   \label{fig:interior-firmware-update-done}
 \end{subfigure}
 \caption{Actualización del firmware: (a) acceder desde el navegador, (b) seleccionar el fichero .bin, (c) confirmación de actualización correcta}
+\label{fig:firmaware-update-browser}
 \end{figure}
 
-\begin{figure}
+Es posible actualizar el software tanto del \MIE como del \MEE de forma remota a partir de la opción \emph{Actualizar} (ver figura~\ref{fig:firmware-update}). Para ello, se deberá disponer de una imagen del firmware actualizado en formato de fichero binario (\texttt{.bin}).
+
+Para ello, se ha de pulsar sobre \emph{Seleccionar archivo}, seleccionando el fichero del firmware actualizado (por ejemplo, \texttt{firmware.bin}). La actualización se aplica pulsando en \emph{Actualizar software}. La actualización se ejecuta en unos pocos segundos, y al finalizar, el módulo se reinicia.
+
+\attbegin{Actualizando en portal cautivo en un dispositivo móvil}
+Si accede a la interfaz de actualización desde la interfaz de portal cautivo de un dispositivo móvil, es posible que el botón de \emph{Seleccionar archivo} se encuentre deshabilitado. En tal caso, deberá acceder a la interfaz de actualización desde un navegador web estándar tal y como muestra la figura~\ref{fig:firmaware-update-browser}.
+
+
+\textbf{Para poder acceder a la interfaz de gestión desde un navegador web ---como \textit{Google Chrome}--- desde su dispositivo móvil, es probable que deba desactivar previamente su conexión de datos.}
+
+
+En primer lugar (figura~\ref{fig:interior-firmware-update-selection}), deberá seleccionar y copiar la dirección de la interfaz web de actualización. A continuación (figura~\ref{fig:interior-firmware-update-chrome}), deberá ir al navegador web de sus dispositivo ---como Google Chrome--- y pegar la dirección en la barra de direcciones. En este punto, ya podrá hacer uso de los botones de la interfaz y proceder a seleccionar el archivo \texttt{firmware.bin} con normalidad. Por último, tras pulsar \emph{Actualizar firmware}, el módulo informará del resultado de la actualización y se reiniciará (figura~\ref{fig:interior-firmware-update-done}). Este proceso es el mismo tanto para el \MIE como para el \MEE.
+\attend
+
+\subsubsection{Información del sistema}
+\label{sec:info}
+
+La sección de \emph{Información} muestra información interna del hardware y del sistema que controlan tanto el \MIE como el \MEE. La informaciónque se muestra es:
+
+
+
+\begin{description}
+
+  \item[Chip id] --- Identificador del chip ESP8266 como un entero de 32 bits.
+
+  \item[Flash Chip id] --- Identificador del chip de la memoria flash como un entero de 32 bits.
+   
+  \item[IDE Flash Size] --- Tamaño de la memoria flash, en bytes, tal y como lo percibe el SDK (puede ser menor que el tamaño real).
+   
+  \item[Real Flash Size] --- Tamaño real de la memoria flash, en bytes, basado en el identificador del chip de la memoria flash.
+  
+  \item[Soft AP IP] --- Dirección IP del punto de acceso por software que permite conectarse al módulo que se encuentra en modo gestión.
+   
+  \item[Soft AP MAC] --- Dirección MAC del punto de acceso por software.
+   
+  \item[Station MAC] --- Dirección MAC de la estación wifi del chip ESP8266.
+   
+\end{description}
+
+\vfill
+
+\begin{figure}[b!]
 \begin{subfigure}{0.49\columnwidth}
   \centering
   \includegraphics[width=1\columnwidth,frame]{images/interior-info}
@@ -228,9 +359,19 @@ Para poder acceder a la interfaz de gestión desde un navegador web ---como \tex
   \label{fig:exterior-info}
 \end{subfigure}
 \caption{Información de los módulos interior (a) y exterior (b)}
+\label{fig:info}
 \end{figure}
 
-\begin{figure}
+\clearpage
+
+\subsubsection{Reinicio}
+\label{sec:reinicio}
+
+Al pulsar la opción \emph{Reiniciar}, el sistema se reinicia directamente sin realizar ningún cambio en la configuración tal y como se muestra en las figuras~\ref{fig:interior-restart} y \ref{fig:exterior-restart}.
+
+\vfill
+
+\begin{figure}[b!]
 \begin{subfigure}{0.49\columnwidth}
   \centering
   \includegraphics[width=1\columnwidth,frame]{images/interior-restart}
@@ -245,5 +386,6 @@ Para poder acceder a la interfaz de gestión desde un navegador web ---como \tex
   \label{fig:exterior-restart}
 \end{subfigure}
 \caption{Reiniciando los módulos interior (a) y exterior (b)}
+\label{fig:restart}
 \end{figure}
 

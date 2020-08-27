@@ -156,7 +156,7 @@
 \RequirePackage{indentfirst}
 \RequirePackage[hang]{caption}
 \DeclareCaptionFormat{upper}{#1#2{\textcaption{#3}}\par}
-\captionsetup{labelfont={bf,color=gray},textfont={normalsize,color=gray},format = upper,figurename=FIGURA,tablename=TABLA}
+\captionsetup{labelfont={bf,color=gray},textfont={normalsize,color=gray},format = upper,figurename=FIGURE,tablename=TABLE}
 
 %%%
 %%% Sections
@@ -175,7 +175,7 @@
 \let\@refname\refname
 \renewcommand{\refname}{\expandafter\MakeUppercase\expandafter{\@refname}}
 \makeatother
-\renewcommand{\contentsname}{\uppercase{ÍNDICE}}
+\renewcommand{\contentsname}{\uppercase{TABLE OF CONTENTS}}
 
 %%%
 %%% Environments
@@ -326,7 +326,7 @@ keepaspectratio]{\@back}%
 \thispagestyle{empty}
 \phantom{~}
 \vfill
-{\urlstyle{rm}\small\noindent\trim@spaces{\@title},~\@subtitlea,~\@subtitleb~\textcopyright~\ifx\@copyrightnotice\empty\else\@copyrightnotice,\fi~\@date. All rights are reserved.}
+{\urlstyle{rm}\small\noindent\trim@spaces{\@title},~\@subtitlea,~\@subtitleb~\textcopyright~\ifx\@copyrightnotice\empty\else\@copyrightnotice,\fi~\@date. Todos los derechos reservados.}
 \newpage
 \thispagestyle{empty}
 \ifpartial{
