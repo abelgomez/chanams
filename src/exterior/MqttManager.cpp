@@ -5,9 +5,6 @@
 #define MQTT_SOCKET_TIMEOUT 5
 #include <PubSubClient.h>
 
-#define MAX_ATTEMPTS 8
-
-
 MqttManager::MqttManager(std::string broker, uint brokerPort) : broker(broker), brokerPort(brokerPort) {};
 
 void MqttManager::publish(Sensors sensors) {
