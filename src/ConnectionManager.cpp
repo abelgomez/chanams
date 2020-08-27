@@ -24,7 +24,7 @@ int ConnectionManager::connect(uint timeout) {
         Serial.println(WiFi.SSID());
         Serial.print("IP address: ");
         Serial.println(WiFi.localIP());
-        return 0;
+        return CONNECTIONMANAGER_CONNECTED;
     }
 }
 
