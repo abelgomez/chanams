@@ -10,8 +10,8 @@
 ExteriorConfigManager::ExteriorConfigManager() {
     load();
     hostnameParam = new WiFiManagerParameter(HOSTNAME_KEY, "Nombre de host", this->getHostname().c_str(), 32);
-    brokerParam = new WiFiManagerParameter(BROKER_KEY, "Nombre o IP del host interior", this->getBroker().c_str(), 127);
-    brokerPortParam = new WiFiManagerParameter(BROKER_PORT_KEY, "Puerto de escucha del host interior", String(this->getBrokerPort()).c_str(), 5);
+    brokerParam = new WiFiManagerParameter(BROKER_KEY, "Nombre o IP del módulo interior", this->getBroker().c_str(), 127);
+    brokerPortParam = new WiFiManagerParameter(BROKER_PORT_KEY, "Puerto de escucha del módulo interior", String(this->getBrokerPort()).c_str(), 5);
     updateTimeParam = new WiFiManagerParameter(UPDATE_TIME_KEY, "Tiempo de espera entre mensajes (minutos)", String(this->getUpdateTimeMinutes()).c_str(), 2);
 }
 
