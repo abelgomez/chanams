@@ -1,7 +1,7 @@
-!/out/document.pdf
-/out/
-/.tmp/
-!/.tmp/.dummy
+!./out/document.pdf
+./out/
+./.tmp/
+!./.tmp/.dummy
 *.aux
 *.bbl
 *.blg
