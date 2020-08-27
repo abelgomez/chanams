@@ -11,7 +11,8 @@ public:
 
     void play();
     void play(int seconds);
-    boolean playing();
+    boolean isActive();
+    void silence();
     void stop();
     virtual boolean OnEnable();
     virtual void OnDisable();
@@ -24,6 +25,7 @@ private:
     uint32_t frequency;
     ulong tsound;
     ulong tsilence;
+    boolean active = false;
 };
 
 class Beep2 : public Task {
@@ -32,7 +34,8 @@ public:
 
     void play();
     void play(int seconds);
-    boolean playing();
+    boolean isActive();
+    void silence();
     void stop();
     virtual boolean OnEnable();
     virtual void OnDisable();
@@ -42,6 +45,7 @@ private:
     uint8_t pin;
     uint it = 0;
     int volume;
+    boolean active = false;
 };
 
 class BlockingBeep {

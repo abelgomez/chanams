@@ -15,16 +15,22 @@ void Beep1::play(int seconds) {
     this->enable();
 }
 
-boolean Beep1::playing() {
-    return this->isEnabled();
+boolean Beep1::isActive() {
+    return active;
+}
+
+void Beep1::silence() {
+    this->disable();
 }
 
 void Beep1::stop() {
+    active = false;
     this->disable();
 }
 
 boolean Beep1::OnEnable() {
     it = 0;
+    active = true;
     return true;
 }
 
@@ -62,16 +68,22 @@ void Beep2::play(int seconds) {
     this->enable();
 }
 
-boolean Beep2::playing() {
-    return this->isEnabled();
+boolean Beep2::isActive() {
+    return active;
+}
+
+void Beep2::silence() {
+    this->disable();
 }
 
 void Beep2::stop() {
+    active = false;
     this->disable();
 }
 
 boolean Beep2::OnEnable() {
     it = 0;
+    active = true;
     return true;
 }
 

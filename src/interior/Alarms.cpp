@@ -14,6 +14,7 @@ void Alarms::dead(bool dead) {
     } else {
         status = status & ~DEAD_ALARM;
     }
+    deadAlarm.stop();
 };
 
 void Alarms::depositFull(bool full) {
@@ -22,6 +23,7 @@ void Alarms::depositFull(bool full) {
     } else {
         status = status & ~DEPOSIT_FULL_ALARM;
     }
+    depositAlarm.stop();
 };
 
 void Alarms::batteryLow(bool low) {
@@ -33,8 +35,8 @@ void Alarms::batteryLow(bool low) {
 };
 
 void Alarms::allOff() {
-    depositAlarm.stop();
-    deadAlarm.stop();
+    depositAlarm.silence();
+    deadAlarm.silence();
 }
 
 bool Alarms::Callback() {
@@ -46,17 +48,19 @@ bool Alarms::Callback() {
         uint now = defaultTZ->hour() * 60 + defaultTZ->minute();
         uint startQuiet = configManager.getStartQuietHours() * 60 + configManager.getStartQuietMinutes();
         uint endQuiet = configManager.getEndQuietHours() * 60 + configManager.getEndQuietMinutes();
-        if (startQuiet <= now && now < endQuiet) {
+        if (startQuiet <= endQuiet && startQuiet <= now && now < endQuiet) {
+            allOff();
+        } else if (startQuiet > endQuiet && (startQuiet <= now || now < endQuiet)) {
             allOff();
         } else if (status & DEAD_ALARM) {
-            if (!deadAlarm.isEnabled()) {
+            if (!deadAlarm.isActive()) {
                 allOff();
-                deadAlarm.play(30);
+                deadAlarm.play();
             }
         } else if (status & DEPOSIT_FULL_ALARM) {
-            if (!depositAlarm.isEnabled()) {
+            if (!depositAlarm.isActive()) {
                 allOff();
-                depositAlarm.play(30);
+                depositAlarm.play(60);
             }
         } else if (status & BATTERY_LOW_ALARM) {
             if (lastHour != defaultTZ->hour()) {
