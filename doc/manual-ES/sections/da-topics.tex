@@ -1,0 +1,22 @@
+\section{MQTT Topics}
+\label{app:mqtt-topics}
+
+La tabla~\ref{tab:topics} resume los \emph{topics} publicados por el \MEE que son reconocidos por el \MIE.
+Es posible conectarse conectarse al \MIE y suscribirse a los \emph{topics} abajo listados empleando un cliente MQTT para recibir la información publicada por el \MEE en otros dispositivos (como por ejemplo, un teléfono móvil).
+
+\begin{table}[H]
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\caption{\textit{Topics} empleados en el \textit{Chana Monitoring System}}
+\label{tab:topics}
+\begin{tabularx}{\textwidth}{lcX}
+\toprule
+\headingc{Topic} & \headingc{Tipo} & \headingc{Descripción} \\
+\topruleb
+  \verb|chanams/deposit-full| & \verb|boolean| & Valor lógico que indica si el depósito monitorizado por el \ME está lleno. \\*\midrule
+  \verb|chanams/battery-vcc|  & \verb|float|   & Valor numérico que indica el voltaje que es capaz de proporcionar la batería del \ME en voltios. \\*\midrule
+  \verb|chanams/temperature|  & \verb|float|   & Valor numérico que indica la temperatura exterior detectada por el \ME. \\*\midrule
+  \verb|chanams/humidity|     & \verb|float|   & Valor numérico que indica la humedad relativa del aire detectada por el \ME. \\*\midrule
+  \verb|chanams/heat-index|   & \verb|float|   & Valor numérico que indica la sensación térmica en el exterior. Se calcula a partir de los valores de temperatura y humedad detectados por el \ME. Sin uso en el \MI. \\*\bottomrule
+\end{tabularx}
+\end{table}
+
