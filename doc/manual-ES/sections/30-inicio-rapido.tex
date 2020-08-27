@@ -2,7 +2,7 @@
 \label{sec:inicio-rapido}
 
 El \CMS requiere una configuración inicial para poder emplearse por primera vez.
-Como mínimo, es necesario que se establezca el nombre y la contraseña de la red wifi a la que los módulos se conectarán para que puedan comunicarse.
+Como mínimo, es necesario que se establezca el nombre y la contraseña de la red wifi a la que los módulos se conectarán para que puedan comunicarse entre ellos.
 Esta configuración debe realizarse tanto en el \MIE como en el \MEE.
 
 \subsection{Configuración rápida del módulo interior}
@@ -11,7 +11,7 @@ El \MIE debe configurarse primero siguiendo los siguiente pasos:
 
 \begin{enumeratecompact}
 
-\item Mientras pulsa el botón multifunción \circled{I8}, conecte la alimentación USB \circled{I6} del \MI. Cuando la luz de notificación de configuración \circled{I3} se encienda de forma fija y en la pantalla LCD \circled{I1} aparezca el texto \emph{Conecta a Config.~Interior} (ver figura~\ref{fig:screen-config}, página \pageref{fig:screen-config}), suelte el botón \circled{I8}.
+\item Mientras pulsa el botón multifunción \circled{I8}, conecte la alimentación USB \circled{I6} del \MI. Cuando el testigo de configuración \circled{I3} se encienda de forma fija y en la pantalla LCD \circled{I1} aparezca el texto \emph{Conecta a Config.~Interior} (ver figura~\ref{fig:screen-config}, página \pageref{fig:screen-config}), suelte el botón \circled{I8}.
 
 Si el mensaje \emph{Conecta a Config.~Interior} no aparece en la pantalla LCD, desconecte la alimentación y comience de nuevo. Alternativamente, en lugar de desconectar y conectar la alimentación USB \circled{I6}, puede presionar el botón de reinicio \circled{I5} mientras pulsa el botón multifunción \circled{I8}.
 
@@ -21,9 +21,9 @@ Si el mensaje \emph{Conecta a Config.~Interior} no aparece en la pantalla LCD, d
 
 \item Seleccione la opción \emph{Configurar} (figura~\ref{fig:interior-menu}, página~\pageref{fig:interior-menu}).
 
-\item Tras unos segundos, se mostrarán la lista de redes wifi detectadas por el \MI. Pulsando sobre el numbre de una red, se rellenará el campo \emph{SSID} (ver figura~\ref{fig:interior-config}). A continuación, escriba la contraseña de la red wifi seleccionada en el campo \emph{password}. Aplique los cambios pulsando el botón \emph{Guardar} al final de la página de configuración.
+\item Tras unos segundos, se mostrarán la lista de redes wifi detectadas por el \MI. Pulsando sobre el nombre de una red, se rellenará el campo \emph{SSID} (ver figura~\ref{fig:interior-config}). A continuación, escriba la contraseña de la red wifi seleccionada en el campo \emph{password}. Aplique los cambios pulsando el botón \emph{Guardar} al final de la página de configuración.
 
-\item Se mostrará el mensaje \emph{Configuración guardada. Conectando a la red\ldots} El módulo se reiniciará en unos segundos. El \MI intentará conectarse automáticamente a la red configurada (ver figura~\ref{fig:screen-conn-process}, página~\pageref{fig:screen-conn-process}) y se quedará a la espera de que el \MEE esté listo (la luz de notificación de configuración \circled{I3} parpadeará). En caso de error (figura~\ref{fig:screen-conn-failed}, página~\pageref{fig:screen-conn-failed}), pruebe de nuevo desde el paso 1.
+\item Se mostrará el mensaje \emph{Configuración guardada. Conectando a la red\ldots} El módulo se reiniciará en unos segundos. El \MI intentará conectarse automáticamente a la red configurada (ver figura~\ref{fig:screen-conn-process}, página~\pageref{fig:screen-conn-process}) y se quedará a la espera de que el \ME esté listo (el testigo de configuración \circled{I3} parpadeará). En caso de error (figura~\ref{fig:screen-conn-failed}, página~\pageref{fig:screen-conn-failed}), pruebe de nuevo desde el paso 1.
 
 \end{enumeratecompact}
 
@@ -36,7 +36,7 @@ El \MEE se debe configurar en segundo lugar siguiendo los pasos a continuación.
 
 \item Asegúrese de que el \ME está apagado (interruptor de encendido \circled{E2} en posición \off).
 
-\item Mientras pulsa el botón de configuración \circled{E5} con ayuda de alguna herramienta de punta estrecha y alargada, conecte el \ME moviendo el interruptor de encendido \circled{E2} a la posición \on. La luz de notificación de actividad \circled{E1} se encenderá momentáneamente. 
+\item Mientras pulsa el botón de configuración \circled{E5} con ayuda de alguna herramienta de punta estrecha y alargada, conecte el \ME moviendo el interruptor de encendido \circled{E2} a la posición \on. El testigo de actividad \circled{E1} se encenderá momentáneamente. 
 
 \item Con la ayuda de un dispositivo móvil o un ordenador con conexión wifi, busque las redes wifi disponibles y conecte a la red llamada \emph{Config.~Exterior} (figura~\ref{fig:exterior-select-wifi}).
 
@@ -44,16 +44,16 @@ El \MEE se debe configurar en segundo lugar siguiendo los pasos a continuación.
 
 \item Seleccione la opción \emph{Configurar} (ver figura~\ref{fig:exterior-menu}).
 
-\item Tras unos segundos, se mostrarán las redes wifi detectadas por el \ME. Pulsando sobre el numbre de una red, se rellenará el campo \emph{SSID} (ver figura~\ref{fig:exterior-config}). A continuación, escriba la contraseña de la red wifi seleccionada en el campo \emph{password}. Aplique los cambios pulsando el botón \emph{Guardar} al final de la página de configuración.
+\item Tras unos segundos, se mostrarán las redes wifi detectadas por el \ME. Pulsando sobre el nombre de una red, se rellenará el campo \emph{SSID} (ver figura~\ref{fig:exterior-config}). A continuación, escriba la contraseña de la red wifi seleccionada en el campo \emph{password}. Aplique los cambios pulsando el botón \emph{Guardar} al final de la página de configuración.
 
-\item Se mostrará el mensaje \emph{Configuración guardada. Conectando a la red\ldots} El sistema se reiniciará en unos segundos. El \ME se conectará automáticamente a la red configurada y se sincronizará con el \MIE: la luz de notificación de configuración \circled{I3} dejará de papadear y se apagará, y en su lugar, se encenderá la luz de notificación de conexión \circled{I4}. Este proceso puede tardar hasta 45 segundos. En caso de error, pruebe de nuevo desde el paso 1.
+\item Se mostrará el mensaje \emph{Configuración guardada. Conectando a la red\ldots} El sistema se reiniciará en unos segundos. El \ME se conectará automáticamente a la red configurada y se sincronizará con el \MI: el testigo de configuración \circled{I3} dejará de papadear y se apagará, y en su lugar, se encenderá el testigo de conexión \circled{I4}. Este proceso puede tardar hasta 45 segundos. En caso de error, pruebe de nuevo desde el paso 1.
 
 \end{enumeratecompact}
 
 
 
 \tipbegin{Configuración avanzada}
-El \CMS permite configurar diversos parámetros de funcionamiento. Revise la sección~\ref{sec:gestion-avanzada} para ver opciones de gestión y configuración avanzadas.
+El \CMS permite configurar muchos otros parámetros de funcionamiento. Revise la sección~\ref{sec:gestion-avanzada} para ver las opciones de gestión y configuración avanzadas.
 \tipend
 
 

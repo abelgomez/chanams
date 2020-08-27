@@ -9,10 +9,10 @@
 \toprule
 \headingc{Color} & \headingc{Estado} & \headingc{Descripción} \\
 \topruleb
-  \circlefilled{red}    & \textsc{\textbf{apagado}}      & No se ha detectado error. Comprobar \circlefilled{yellow} y \circlefilled{green} para más datos.\\*\midrule
+  \circlefilled{red}    & \textsc{\textbf{apagado}}      & Sin errores. Comprobar \circlefilled{yellow} y \circlefilled{green} para más datos.\\*\midrule
   \circlefilled{red}    & \textsc{\textbf{fijo}}         & El \MIE ha perdido conexión con el \MEE durante demasiado tiempo.\\*\midrule
   \circlefilled{red}    & \textsc{\textbf{intermitente}} & El \MEE ha detectado que el depósito está lleno.\\*\midrule
-  \circlefilled{yellow} & \textsc{\textbf{apagado}}      & El \MIE se inició correctamente y pudo sincronizarse con el \ME. Comprobar \circlefilled{red} y \circlefilled{green} para más datos.\\*\midrule
+  \circlefilled{yellow} & \textsc{\textbf{apagado}}      & El \MIE se inició correctamente y se sincronizó con el \ME. Comprobar \circlefilled{red} y \circlefilled{green} para más datos.\\*\midrule
   \circlefilled{yellow} & \textsc{\textbf{fijo}}         & El \MIE está intentando conectar a una red wifi o está en modo gestión.\\*\midrule
   \circlefilled{yellow} & \textsc{\textbf{intermitente}} & El \MIE se ha iniciado correctamente, pero no se ha sincronizado con el \MEE aún.\\*\midrule
   \circlefilled{green}  & \textsc{\textbf{apagado}}      & No hay/ha habido conexión entre el \MIE y el \MEE. Comprobar \circlefilled{red} y \circlefilled{yellow} para más datos.\\*\midrule
@@ -21,15 +21,15 @@
 \end{tabularx}
 \end{table}
 
-Con el objetivo de maximizar el tiempo de vida de las batería del \MEE, el \MIE es quien proporciona toda la información al usuario del \CMS a través de alarmas sonoras, las luces de notificación \circled{I2}, \circled{I3} e \circled{I4} y la pantalla LCD \circled{I1}. Las luces de notificación y las alarmas sonoras permiten comprobar el estado del \CMS de un vistazo rápido, sin necesidad de comprobar los mensajes que se muestran en la pantalla LCD \circled{I1}. La tabla~\ref{tab:luces} resume los principales estados que representan las diferentes luces de notificación.
+Con el objetivo de maximizar el tiempo de vida de las batería del \MEE, el \MIE es quien proporciona toda la información al usuario del \CMS a través de alarmas sonoras, los testigos \circled{I2}, \circled{I3} e \circled{I4} y la pantalla LCD \circled{I1}. Los testigos y las alarmas sonoras permiten comprobar el estado del \CMS de un vistazo rápido, sin necesidad de comprobar los mensajes que se muestran en la pantalla LCD \circled{I1}. La tabla~\ref{tab:luces} resume los principales estados que representan los diferentes testigos de colores.
 
 
 
-En las siguientes subsecciones, se describe en detalle las diferentes informaciones que puede mostrar el \CMS.
+En las siguientes subsecciones, se describne en detalle las diferentes informaciones que puede mostrar el \CMS.
 
 \subsection{Arranque}
 
-Cuando el \MIE se conecta a la alimentación USB, éste se enciende de forma automática, e intenta conectarse a la red wifi que haya sido configurada a través de la interfaz de gestión (ver sección~\ref{sec:gestion-avanzada}). Esto se notifica mediante la luz de notificación de configuración \circled{I3} encendida de forma fija (\circlefilled{yellow}), y mostrando el mensaje \emph{Conectando a red WiFi\ldots} en la pantalla LCD \circled{I1} tal y como muestra la figura \ref{fig:screen-conn-process}.
+Cuando el \MIE se conecta a la alimentación USB, éste se enciende de forma automática e intenta conectarse a la red wifi que haya sido configurada a través de la interfaz de gestión (ver sección~\ref{sec:gestion-avanzada}, \textit{\nameref{sec:gestion-avanzada}}). Esto se notifica mediante el testigo de configuración \circled{I3} encendido de forma fija (\circlefilled{yellow}), y mostrando el mensaje \emph{Conectando a red WiFi\ldots} en la pantalla LCD \circled{I1} tal y como muestra la figura \ref{fig:screen-conn-process}.
 
 \begin{figure}[!b]
   \centering
@@ -46,11 +46,12 @@ Cuando el \MIE se conecta a la alimentación USB, éste se enciende de forma aut
 \end{figure}
 
 
-En caso de que la conexión falle, el sistema apagará todas las luces de notificación y mostrará el mensaje \emph{Conexion fallida / Durmiendo ZzZz} tal y como muestra la figura~\ref{fig:screen-conn-failed}. El \MI se quedará en ese estado de hibernación hasta que el usuario lo reinicie y compruebe por qué no ha sido posible realizar la conexión.
+En caso de que la conexión falle, el sistema apagará todos los testigos y mostrará el mensaje \emph{Conexion fallida / Durmiendo ZzZz} tal y como muestra la figura~\ref{fig:screen-conn-failed}. El \MI se quedará en ese estado de hibernación hasta que el usuario lo reinicie y compruebe por qué no ha sido posible realizar la conexión (error puntual, cobertura wifi deficiente, \etc).
 
 
 
 \subsection{El menú de información}
+\label{sec:menu-info}
 
 El menú de información se muestra cuando el \MIE ha arrancado y se ha conectado a una red wifi de forma satisfactoria. Consta de 5 pantallas, que pueden navegarse en la secuencia
 ~~~\tikz[baseline=-0.63ex,node distance=1em,remember picture]{
@@ -77,7 +78,9 @@ pulsando el botón multifunción~\circled{I8}.
 \textbf{Pasados 60 segundos desde la última pulsación del botón multifunción \circled{I8}, el \MI volverá automáticamente a la pantalla 1.}
 
 \attbegin{Pantallas 1 y 2}
-Nada más iniciarse, y mientras la luz de notificación de configuración \circled{I3} se enciende de forma \textbf{intermitente} (\circlefilled{yellow}), sólo se mostrarán las pantallas 3 a 5 hasta que el \ME realice la primera sincronización de datos y se encienda la luz de notificación de conexión \circled{I4} (\circlefilled{green}). \textbf{En ese caso, al pasar 60 segundos sin pulsar el botón multifunción \circled{I8}, el \MI volverá automáticamente a la pantalla 3 en lugar de a la pantalla 1.}
+Nada más iniciarse, y mientras el testigo de configuración \circled{I3} se enciende de forma \textbf{intermitente} (\circlefilled{yellow}), sólo se mostrarán las pantallas 3 a 5 hasta que el \MEE realice la primera sincronización de datos y se encienda el testigo de conexión \circled{I4} (\circlefilled{green}).
+
+\textbf{En ese caso, al pasar 60 segundos sin pulsar el botón multifunción \circled{I8}, el \MI volverá automáticamente a la pantalla 3 en lugar de a la pantalla~1.}
 \attend
 
 Las pantallas de información que muestre el \MIE en su modo de operación normal son:
@@ -110,10 +113,10 @@ Las pantallas de información que muestre el \MIE en su modo de operación norma
 \label{fig:screen2}
 \end{figure}
 
-\item[Pantalla 2: información de batería] --- Al igual que la pantalla 1, esta pantalla sólo se muestra cuando el \MEE ha enviado datos de estado recientemente. Como muestra la figura~\ref{fig:screen2}, la primera línea muestra el estado de la batería (según el umbral de batería baja que se haya configurado, ver sección~\ref{sec:config}), mientras que la segunda línea muestra el detalle de la tensión proporcionada por las baterías del \MEE. Cuando se muestra el mensaje de \emph{Bateria BAJA}, la luz de notificación de conexión \circled{I4} (\circlefilled{green}) estará encendida de forma intermitente.
+\item[Pantalla 2: información de batería] --- Al igual que la pantalla 1, esta pantalla sólo se muestra cuando el \MEE ha enviado datos de estado recientemente. Como muestra la figura~\ref{fig:screen2}, la primera línea muestra el estado de la batería según el \emph{Umbral de batería baja} (ver sección~\ref{sec:params-interior}, \textit{\nameref{sec:params-interior}}), mientras que la segunda línea muestra el detalle de la tensión proporcionada por las baterías del \MEE. Cuando se muestra el mensaje de \emph{Bateria BAJA}, el testigo de conexión \circled{I4} (\circlefilled{green}) estará encendida de forma intermitente.
 
 \attbegin{Umbral de batería baja}
-La temperatura exterior puede afectar al nivel de batería detectado en \mbox{$\pm$0,1v}, por tanto, es normal que existan variaciones mínimas en el nivel de batería a lo largo del día. Igualmente, cuando el nivel de batería esté cerca del umbral de batería baja, es normal que el \MIE cambie frecuentemente entre \emph{Batería OK} y \emph{Bateria BAJA} dependiendo de las variaciones de la temperatura exterior.
+La temperatura exterior puede afectar al nivel de batería detectado en \mbox{$\pm$0,1 V}. Por tanto, es normal que existan variaciones mínimas en el nivel de batería a lo largo del día. Igualmente, cuando el nivel de batería esté cerca del umbral de batería baja, es normal que el \MIE cambie frecuentemente entre \emph{Batería OK} y \emph{Bateria BAJA} dependiendo de las variaciones de la temperatura exterior.
 \attend
 
 \begin{figure}
@@ -124,9 +127,9 @@ La temperatura exterior puede afectar al nivel de batería detectado en \mbox{$\
 \end{figure}
 
 
-\item[Pantalla 3: información de red] --- Ésta es la primera pantalla que se muestra cuan\-do el \MIE acaba de iniciarse, el \MEE todavía no ha enviado datos, y la luz de notificación de configuración \circled{I3} (\circlefilled{yellow}) todavía se enciende de forma intermitente. Como muestra la figura~\ref{fig:screen3}, en la primera línea se mostrará el nombre de la red wifi a la que se encuentre conectado el \ME (hasta un máximo de 16 caracteres), mientras que la segunda línea mostrará el nombre de host que se haya especificado en la configuración del \MI. Aquellos dispositivos que soporten el protocolo \emph{mDNS} podrán conectarse al \MI empleando el nombre de host que aquí aparece añadiendo el sufijo \emph{.local} (por ejemplo, \emph{chanams-interior.local}). 
+\item[Pantalla 3: información de red] --- Ésta es la primera pantalla que se muestra cuan\-do el \MIE acaba de iniciarse, el \MEE todavía no ha enviado datos, y el testigo de configuración \circled{I3} (\circlefilled{yellow}) todavía se enciende de forma intermitente. Como muestra la figura~\ref{fig:screen3}, en la primera línea se muestra el nombre de la red wifi a la que se encuentre conectado el \ME (hasta un máximo de 16 caracteres), mientras que la segunda línea muestra el \emph{Nombre de host} que se ha especificado en la configuración del \MI (ver sección~\ref{sec:params-interior}). Aquellos dispositivos que soportan el protocolo \emph{mDNS} pueden conectarse al \MI empleando el nombre de host que aquí aparece añadiendo el sufijo \texttt{.local} (por ejemplo, \texttt{chanams-interior.local}). 
 
-\item[Pantalla 4: IP y puerto de escucha] --- Esta pantalla muestra más información de red. La primera línea muestra la dirección IP del \MIE~---útil cuando los dispositivos que se desea conectar al \MI no soportan el protocolo mDNS--- mientras que la segunda línea muestra el puerto de escucha.
+\item[Pantalla 4: IP y puerto de escucha] --- Esta pantalla muestra más información de red. La primera línea muestra la dirección IP del \MIE~---útil cuando se desea conectar al \MI un dispositivo que no soporta el protocolo mDNS--- mientras que la segunda muestra el \emph{Puerto de escucha} (ver sección~\ref{sec:params-interior}).
 
 \begin{figure}
   \centering
@@ -142,7 +145,7 @@ La temperatura exterior puede afectar al nivel de batería detectado en \mbox{$\
   \label{fig:screen5}
 \end{figure}
 
-\item[Pantalla 5: fecha y hora] --- Esta pantalla muestra la fecha y hora según la zona horaria que se ha establecido en las opciones de configuración (de nuevo, ver sección~\ref{sec:config}). Dadas las características del hardware del \CMS (que no dispone de reloj interno), la fecha y la hora se obtiene de internet. La primera línea muestra la fecha, mientras que la segunda línea muestra la hora y la zona horaria, por ejemplo, CEST (\textit{Central European Summer Time} u hora de verano de Europa central), CET (\textit{Central European Time} u hora de invierno de Europa central), etc.
+\item[Pantalla 5: fecha y hora] --- Esta pantalla muestra la fecha y hora según la zona horaria que se ha establecido en las opciones de configuración (de nuevo, ver sección~\ref{sec:params-interior}). Dadas las características del hardware del \CMS (que no dispone de reloj interno), la fecha y la hora se obtienen de internet. La primera línea muestra la fecha, mientras que la segunda muestra la hora y la zona horaria, por ejemplo, CEST (\textit{Central European Summer Time} u hora de verano de Europa central), CET (\textit{Central European Time} u hora de invierno de Europa central),~\etc
 
 \end{descriptioncompact}
 
@@ -150,18 +153,18 @@ La temperatura exterior puede afectar al nivel de batería detectado en \mbox{$\
 \subsection{Avisos y alarmas sonoras}
 \label{sec:alarmas}
 
-Además de las señales luminosas, el \CMS puede lanzar avisos y alarmas sonoras para alertar de los eventos críticos que requiren de una acción in\-me\-diata del usuario.
+Además de los testigos luminosos, el \CMS puede lanzar avisos y alarmas sonoras para alertar de los eventos críticos que requiren de una acción in\-me\-diata del usuario.
 
 \tipbegin{Modo silencio permanente}
 Es posible desactivar todas las alarmas sonoras de forma permanente colocando el interruptor de la alarma sonora \circled{I8} en la posición \off.
 \tipend
 
 \tipbegin{Silencio automático}
-Además del modo de silencio permanente, el \CMS puede silenciarse automáticamente durante una determinada franja horaria, por ejemplo, para evitar avisos sonoros durante la noche. Vea la sección~\ref{sec:config}, \nameref{sec:gestion-avanzada}, para más información.
+Además del modo de silencio permanente, el \CMS puede silenciarse automáticamente durante una determinada franja horaria, por ejemplo, para evitar avisos sonoros durante la noche. Vea la sección~\ref{sec:params-interior} (\textit{\nameref{sec:params-interior}}) para más información.
 \tipend
 
 \tipbegin{Comprobación de estado de las alarmas sonoras}
-En caso de duda, es posible comprobar si el \CMS se encuentra en modo de silencio permanente pulsando el botón de reinicio \circled{I5} ---o desconectando momentáneamente la alimentación USB \circled{I6}--- del \MIE. Si el modo de silencio permanente está desactivado, el \CMS emitirá tres pitidos cortos al iniciarse. \textbf{Estos tres pitidos se emitirán incluso en el periodo de silencio automático.}
+En caso de duda, es posible comprobar si el \CMS se encuentra en modo de silencio permanente pulsando el botón de reinicio \circled{I5} ---o desconectando momentáneamente la alimentación USB \circled{I6}--- del \MIE. Si el modo de silencio permanente está \textbf{activado}, el \CMS no emitirá ningún sonido. Si el modo de silencio permanente está \textbf{desactivado}, el \CMS emitirá tres pitidos cortos al iniciarse. \textbf{Los tres pitidos se emitirán incluso en el periodo de silencio automático.}
 \tipend
 
 
@@ -169,36 +172,38 @@ Los avisos y alarmas que emite el \CMS son:
 
 \begin{descriptioncompact}
 
-\item[Aviso de batería baja] --- Cuando la tensión proporcionada por la batería del \MEE está por debajo del umbral configurado (véase \emph{Umbral de batería baja} en la sección~\ref{sec:config}), el \MIE lo notifica regularmente emitiendo un breve pitido agudo en todas las horas en punto hasta que las baterías son reemplazadas.
+\item[Aviso de batería baja] --- Cuando la tensión proporcionada por la batería del \MEE está por debajo del umbral configurado (véase \emph{Umbral de batería baja} en la sección~\ref{sec:params-interior}), el \MIE lo notifica regularmente emitiendo un breve pitido agudo en todas las horas en punto ---o en la primera sincronización cuando el \CMS acaba de conectarse--- hasta que las baterías son reemplazadas.
 
-Recuérdese que cuando el \ME notifica un valor por debajo del \emph{Umbral de batería baja}, la luz de notificación de conexión \circled{I4} (\circlefilled{green}) permanece encendida de forma intermitente.
+Recuerde que cuando el \ME notifica un valor por debajo del \emph{Umbral de batería baja}, el testigo de conexión \circled{I4} (\circlefilled{green}) permanece encendido de forma intermitente.
 
-\begin{figure}[!b]
+
+\item[Alarma de depósito lleno] --- Cuando el \MEE notifica que el depósito se ha llenado, el \MIE emite breves pitidos graves de forma continua durante 60 segundos (o hasta que se pulsa el botón multifución \circled{I8}).
+La secuencia de pitidos de 60 segundos de duración se repite cada varios minutos (según el \emph{Tiempo de espera entre mensajes}, véase la sección~\ref{sec:params-exterior}) mientras el depósito permanece lleno.
+
+Cuando el aviso de depósito lleno se dispara, el menú de información del \MIE se bloquea, la pantalla LCD \circled{I1} muestra el mensaje \emph{!!! ALERTA !!! / DEPO\-SITO LLENO} (ver figura~\ref{fig:screen-deposit-full}), y el testigo de fallo \circled{I2} (\circlefilled{red}) permanece encendido de forma intermitente hasta que se vacía el depósito. 
+
+\begin{figure}
   \centering
   \includegraphics[width=0.6\columnwidth]{images/screen-deposit-full}
   \caption{Pantalla del módulo interior: depósito lleno}
   \label{fig:screen-deposit-full}
 \end{figure}
 
-\item[Alarma de depósito lleno] --- Cuando el \MIE recibe un aviso por parte del \MEE de que el depósito se ha llenado, emite breves pitidos graves de forma continua durante 60 segundos (o hasta que se pulsa el botón multifución \circled{I8}).
-Mientras el depósito esté lleno, la secuencia de pitidos de 60 segundos de duración se repetirá periódicamente cada varios minutos según el \emph{Tiempo de espera entre mensajes} que se haya configurado (véase la sección~\ref{sec:config}). 
-
-Cuando el aviso de depósito lleno se dispara, el menú de información del \MIE se bloquea, la pantalla LCD \circled{I1} muestra el mensaje \emph{!!! ALERTA !!! / DEPO\-SITO LLENO} (ver figura~\ref{fig:screen-deposit-full}), y la luz de notificación de fallo \circled{I2} (\circlefilled{red}) permanece encendida de forma intermitente hasta que se ha vaciado el depósito. 
-
-
-\item[Alarma de conexión perdida] --- Cuando el \MIE no recibe ninguna información por parte del \MEE durante demasiado tiempo (véase \emph{Tiempo de espera máximo} en la sección~\ref{sec:config}, \nameref{sec:gestion-avanzada}), emite un pitido agudo y un pitido grave (emulando una sirena) de forma continua hasta que la conexión con el \MEE se restaura o la alarma se silencia pulsando el botón multifunción \circled{I8}.   
-
-Cuando el aviso de conexión perdida se dispara, el menú de información del \MIE se bloquea, la pantalla LCD \circled{I1} muestra el mensaje \emph{!!! ALERTA !!! / CONEXION PERDIDA} (véase figura~\ref{fig:screen-conn-lost}), y la luz de notificación de fallo \circled{I2} (\circlefilled{red}) permanece encendida de forma fija hasta que se restaura la conexión entre los módulos interior y exterior. 
-
-\begin{figure}[H]
+\begin{figure}
   \centering
   \includegraphics[width=0.6\columnwidth]{images/screen-conn-lost}
   \caption{Pantalla del módulo interior: conexión perdida}
   \label{fig:screen-conn-lost}
 \end{figure}
 
+\item[Alarma de conexión perdida] --- Cuando el \MIE no recibe ninguna información por parte del \MEE durante demasiado tiempo (véase \emph{Tiempo de espera máximo} en la sección~\ref{sec:params-interior}, \textit{\nameref{sec:params-interior}}), el \MIE emite un pitido agudo y un pitido grave ---emulando una sirena--- de forma continua hasta que la conexión con el \MEE se restaura o la alarma se silencia pulsando el botón multifunción \circled{I8}.   
+
+Cuando el aviso de conexión perdida se dispara, el menú de información del \MIE se bloquea, la pantalla LCD \circled{I1} muestra el mensaje \emph{!!! ALERTA !!! / CONEXION PERDIDA} (véase figura~\ref{fig:screen-conn-lost}), y el testigo de fallo \circled{I2} (\circlefilled{red}) permanece encendido de forma fija hasta que se restaura la conexión entre los módulos interior y exterior. 
+
+
+
 \attbegin{En caso de conexión perdida}
-En caso de conexión perdida, revise el procedimiento detallado en la sección~\ref{sec:conn-perdida}.
+En caso de conexión perdida, revise el procedimiento detallado en la sección~\ref{sec:conn-perdida} (\textit{\nameref{sec:conn-perdida}}).
 \attend
 
 \end{descriptioncompact}

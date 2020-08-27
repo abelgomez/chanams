@@ -1,6 +1,8 @@
 \section{Resolución de problemas}
 \label{sec:resolucion-problemas}
 
+A continuación, se describen los procedimientos básicos a realizar cuando se disparan los diversos avisos y alarmas del \MEE.
+
 \subsection{En caso de batería baja}
 \label{sec:bateria-baja}
 
@@ -17,37 +19,37 @@
 
 \end{itemizecompact}
 
-Una vez haya cambiado las baterías, espere a que el \MIE y el \MIE se sincronicen correctamente.  
+Una vez haya cambiado las baterías, espere a que el \MIE y el \MEE se sincronicen correctamente.  
 
 \begin{itemizecompact}
 
-\item Si los módulos se sincronizan, y la alarma se ha detenido, ha terminado.
+\item Si los módulos se sincronizan y los avisos sonoros de batería baja se han detenido, el procedimiento ha terminado.
 
-\item Si los módulos se sincronizan, pero el aviso de batería baja sigue sonando, continúe en el paso 2.
+\item Si los módulos se sincronizan pero los avisos sonoros de batería baja siguen sonando, continúe en el paso 2.
 
-\item En caso de no sincronización, siga el procedimiento que se detalla en la sección~\ref{sec:conn-perdida}.
+\item En caso de no sincronización, siga el procedimiento que se detalla en la sección~\ref{sec:conn-perdida} (\textit{\nameref{sec:conn-perdida}}).
 
 \end{itemizecompact}
 
-\item \textbf{Compruebe que las nuevas baterías tienen el nivel de carga correcto.} Para ello, revise el nivel de batería en la pantalla 2 del menú de información del \MIE pulsando el botón multifunción \circled{I8}. Tenga en cuenta que:
+\item \textbf{Compruebe que las nuevas baterías tienen el nivel de carga correcto.} Para ello, revise el nivel de batería en la pantalla 2 del menú de información del \MIE pulsando el botón multifunción \circled{I8} (ver sección~\ref{sec:menu-info}, \textit{\nameref{sec:menu-info}}). Tenga en cuenta que:
 
 \begin{itemizecompact}
 
-\item Unas baterías recién cargadas típicamente indican un voltaje superior a los 5,0 V cuando están en perfectas condiciones. Si el valor es menor, las baterías han comenzado a degradarse.
+\item Unas baterías recién cargadas proporcionan típicamente un voltaje superior a los 5,0 V cuando están en perfectas condiciones. Si el valor es menor, las baterías han comenzado a degradarse.
 
 \item Unas baterías en buenas condiciones deben de permanecer la mayor parte del tiempo de uso en un valor alrededor de los 4,8 V -- 4,9 V.
 
-\item Si las baterías se han cargado recientemente, y su voltaje ha caído rápidamente tras poco tiempo se uso, reemplácelas por un juego nuevo y vuelva al paso 1.
+\item Si las baterías se han cargado recientemente, y su voltaje ha caído rápidamente tras poco tiempo se uso, las baterías están degradas. Reemplácelas por un juego nuevo y vuelva al paso 1.
 
-\item Si las baterías muestran valores normales, pero el aviso de batería baja continúa sonando regularmente, continúe en el paso 3.
+\item Si las baterías muestran valores normales, pero los avisos de batería baja continúan sonando regularmente, continúe en el paso 3.
 
 \end{itemizecompact}
 
-\item \textbf{Compruebe el \emph{Umbral de batería baja} configurado en el \MIE.} Para ello acceda al modo gestión siguiendo el procedimiento detallado en la sección~\ref{sec:acceso-gestion}. Un valor razonable estará típicamente entre los 4,6 V y 4,8 V aproximadamente (véase la figura~\ref{fig:discharge-curve} para poder estimar los valores adecuados). En todo caso, el valor deberá ser inferior al voltaje que las baterías del \ME reportan la mayor parte de su vida útil.
+\item \textbf{Compruebe el \emph{Umbral de batería baja} configurado en el \MIE.} Para ello acceda al modo gestión siguiendo el procedimiento detallado en la sección~\ref{sec:acceso-gestion}. Un valor razonable para el \emph{Umbral de batería baja} estará típicamente entre los 4,6 V y 4,8 V aproximadamente (véase la figura~\ref{fig:discharge-curve} para poder estimar los valores adecuados). En todo caso, el valor deberá ser inferior al voltaje que las baterías del \ME reportan la mayor parte de su vida útil.
 
 \begin{itemizecompact}
 
-\item Si necesita ajustar el \emph{Umbral de batería baja}, siga el procedimiento detallado en la sección~\ref{sec:params-interior}.
+\item Si necesita ajustar el \emph{Umbral de batería baja}, revise la sección~\ref{sec:params-interior}.
 
 \end{itemizecompact}
 
@@ -71,11 +73,11 @@ Una vez haya cambiado las baterías, espere a que el \MIE y el \MIE se sincronic
 
 \item Acceda donde se encuentre el \MEE.
 
-\item Retire el sensor de boya del interior del depósito.
+\item Retire el sensor de flotador del interior del depósito.
 
 \item Vacíe el depósito en un lugar adecuado.
 
-\item Vuelva a colocar el depósito en su lugar, e inserte de nuevo la boya en el interior del depósito a una altura adecuada cerca del límite de su capacidad.  
+\item Vuelva a colocar el depósito en su lugar, e inserte de nuevo el flotador en el interior del depósito a una altura adecuada cerca del límite de su capacidad.  
 
 \end{itemizecompact}
 
@@ -85,7 +87,7 @@ Una vez haya cambiado las baterías, espere a que el \MIE y el \MIE se sincronic
   
 \item esperar a que el \MEE envíe el siguiente mensaje de sincronización según el \emph{Tiempo de espera entre mensajes} configurado; o
 
-\item reiniciar el \MEE forzando la sincronización. Para ello, coloque el interruptor de encendido \circled{E2} en la posición \off, espere unos segundos, y vuelva a conectar el \ME moviendo el interruptur de encendido \circled{E2} a la posición~\on. En caso de no sincronización, siga el procedimiento que se detalla en la sección~\ref{sec:conn-perdida}.
+\item reiniciar el \MEE forzando la sincronización. Para ello, coloque el interruptor de encendido \circled{E2} en la posición \off, espere unos segundos, y vuelva a conectar el \ME moviendo el interruptur de encendido \circled{E2} a la posición~\on. En caso de no sincronización, siga el procedimiento que se detalla en la sección~\ref{sec:conn-perdida} (\textit{\nameref{sec:conn-perdida}}).
   
 \end{enumeratecompact}
 
@@ -93,19 +95,19 @@ Una vez haya cambiado las baterías, espere a que el \MIE y el \MIE se sincronic
 
 \begin{itemizecompact}
 
-\item Si la \emph{alarma de depósito lleno} ha dejado de sonar, ha terminado.
+\item Si la \emph{alarma de depósito lleno} ha dejado de sonar, el procedimiento ha terminado.
 
 \item Si la \emph{alarma de depósito lleno} continúa sonando aunque el depósito haya sido vaciado. Compruebe que:
 
 \begin{itemizecompact}
 
-\item El sensor de boya está en posición vertical.
+\item El sensor de flotador está en posición vertical.
 
-\item El flotador del sensor de boya se encuentra en la posición inferior.
+\item El flotador del sensor se encuentra en la posición inferior.
 
-\item El sensor de boya está limpio y el flotador se mueve con facilidad.
+\item El sensor está limpio y el flotador se mueve con facilidad.
 
-\item El cable del sensor de boya y los conectores están en buenas condiciones y libres de óxido.
+\item El cable del sensor de flotador y los conectores están en buenas condiciones y libres de óxido.
 
 \end{itemizecompact}
 
@@ -113,7 +115,7 @@ Una vez hechas estas comprobaciones, vuelva al paso 2.
 
 \end{itemizecompact}
 
-\item \textbf{Si tras haber seguido los puntos previos, la \emph{alarma de depósito lleno} continúa sonando,} existe un problema anormal con el sensor de boya. Desconecte el \CMS y llévelo a reparar.
+\item \textbf{\color{main}Si tras haber seguido los puntos previos, la \emph{alarma de depósito lleno} continúa sonando,} existe un problema anormal con el sensor de flotador. Desconecte el \CMS y llévelo a reparar.
 
 \end{enumeratecompact}
 
@@ -127,30 +129,30 @@ En caso de que el \CMS le alerte de que se ha perdido la conexión entre en \MIE
 
 \begin{itemizecompact}
 
-\item Si tras varios intentos el \MI no se conecta a una red wifi, entre en el modo de gestión (sección~\ref{sec:gestion-avanzada}, \nameref{sec:gestion-avanzada}) y configure de nuevo el nombre de la red y la contraseña (sección~\ref{sec:config}, \nameref{sec:config}).
+\item Si tras varios intentos el \MI no se conecta a una red wifi, entre en el modo de gestión (sección~\ref{sec:gestion-avanzada}, \textit{\nameref{sec:gestion-avanzada}}) y configure de nuevo el nombre de la red y la contraseña (sección~\ref{sec:config}, \textit{\nameref{sec:config}}).
 
 \end{itemizecompact}
 
-\item \textbf{Reinicie el \MEE y compruebe que dispone de batería}. Para ello, coloque el interruptor de encendido \circled{E2} en la posición \off, espere unos segundos, y vuelva a conectar el \ME moviendo el interruptur de encendido \circled{E2} a la posición~\on. 
+\item \textbf{Reinicie el \MEE y compruebe que dispone de batería}. Para ello, coloque el interruptor de encendido \circled{E2} en la posición \off, espere unos segundos, y vuelva a conectar el \ME moviendo el interruptor de encendido \circled{E2} a la posición~\on. 
 
 \begin{itemizecompact}
 
-\item Si la luz de notificación de actividad \circled{E1} no se enciende, reemplace las pilas del \ME, y vuelva al inicio del paso 2.
+\item Si el testigo de actividad \circled{E1} no emite ningún destello, reemplace las pilas del \ME, y vuelva al inicio del paso 2.
 
-\item Si la luz de notificación de actividad \circled{E1} emite un breve destello azul, continúe. 
+\item Si el testigo de actividad \circled{E1} emite un breve destello azul, continúe. 
 
 \end{itemizecompact}
 
 
-\item \textbf{Compruebe de nuevo las luces de notificación del \MIE pasados unos instantes (máximo 45 segundos)}.
+\item \textbf{Compruebe de nuevo los testigos del \MIE pasados unos instantes (máximo 45 segundos)}.
 
 \begin{itemizecompact}
 
-\item Si la luz de notificación de fallo \circled{I2} se ha apagado y la luz de notificación de conexión \circled{I4} ha pasado a color \textbf{verde fijo}, la conexión se ha reestablecido y no se debe realizar ninguna acción más.
+\item Si el testigo de fallo \circled{I2} se ha apagado y el testigo de conexión \circled{I4} ha pasado a color \textbf{verde fijo}, la conexión se ha reestablecido y no se debe realizar ninguna acción más.
 
-\item Si la luz de notificación de fallo \circled{I2} se ha apagado y la luz de notificación de conexión \circled{I4} ha pasado a color \textbf{verde parpadeante}, la conexión se ha reestablecido pero se deben reemplazar las pilas del \ME a la mayor brevedad posible.
+\item Si el testigo de fallo \circled{I2} se ha apagado y el testigo de conexión \circled{I4} ha pasado a color \textbf{verde parpadeante}, la conexión se ha reestablecido pero se deben reemplazar las pilas del \ME a la mayor brevedad posible.
 
-\item Si la luz de notificación de fallo \circled{I2} continúa encendida, repita de nuevo los pasos 1 y 2. \textbf{\color{main}Si tras varios intentos} la luz de notificación de fallo \circled{I2} permanece encedida, entre en el modo de gestión del \ME (sección~\ref{sec:gestion-avanzada}, \nameref{sec:gestion-avanzada}) y compruebe que tanto el \MI como el \ME están conectados a la misma red wifi con la contraseña correcta, y que los valores \emph{Nombre o IP del host interior} y \emph{Puerto de escucha del host interior} configurados en el \ME se corresponden con \emph{Nombre de host} y \emph{Puerto de escucha} del \MI~---mostrados también en las pantallas 3 (figura~\ref{fig:screen3}) y 4 (figura~\ref{fig:screen4}) del módulo interior.
+\item Si el testigo de fallo \circled{I2} continúa encendido, repita de nuevo los pasos 1 y 2. \textbf{\color{main}Si tras varios intentos} el testigo de fallo \circled{I2} permanece encedido, entre en el modo de gestión del \ME (sección~\ref{sec:gestion-avanzada}, \textit{\nameref{sec:gestion-avanzada}}) y compruebe que tanto el \MI como el \ME están conectados a la misma red wifi con la contraseña correcta, y que los valores \emph{Nombre o IP del host interior} y \emph{Puerto de escucha del host interior} configurados en el \ME se corresponden con \emph{Nombre de host} y \emph{Puerto de escucha} del \MI~---mostrados también en las pantallas 3 (figura~\ref{fig:screen3}) y 4 (figura~\ref{fig:screen4}) del módulo interior.
 
 \end{itemizecompact}
 
