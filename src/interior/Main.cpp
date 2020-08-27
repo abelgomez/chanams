@@ -24,7 +24,7 @@
 #define SDA D4
 #define SCL D3
 
-#define WIFI_TIMEOUT 7000
+#define WIFI_TIMEOUT 15000
 
 class Dummy {
 public:
