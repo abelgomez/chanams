@@ -29,9 +29,7 @@ Other parts of the NodeMCU v3 also consume battery in sleep mode, but this modif
 
 In normal conditions, this period can be increased notably, and as a consequence, the battery lasts for several months.
 
-## User Manual
-
-:warning: Only in spanish! :warning:
+## User Manual (:warning: Only in spanish! :warning:)
 
 There's available a full user manual of the CMS in [`doc/manual-ES/out/document.pdf`](doc/manual-ES/out/document.pdf).
 
