@@ -25,11 +25,15 @@ Nevertheless, the quiescent current of the AMS1117 is still too high (~5mA), dra
 
 Other parts of the NodeMCU v3 also consume battery in sleep mode, but this modification is simple and good enough to make the exterior module battery to last for weeks without further hacks. Next plot shows how the battery voltage changes (until the exterior module dies), when the exterior module wakes up and connects to the wifi to send data once every minute. In that case, the battery *exterior module* lasts for nearly 20 days.
 
-![Discharge curve](doc/manual-ES/images/discharge-curve.png)
+| ![Discharge curve](doc/manual-ES/images/discharge-curve.png) |
+|:------------------------------------------------------------:|
 
 In normal conditions, this period can be increased notably, and as a consequence, the battery lasts for several months.
 
-## User Manual (:warning: Only in spanish! :warning:)
+## User Manual
+
+:warning: | **Only in Spanish!** | :warning:
+----------|----------------------|----------
 
 There's available a full user manual of the CMS in [`doc/manual-ES/out/document.pdf`](doc/manual-ES/out/document.pdf).
 
