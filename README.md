@@ -31,9 +31,9 @@ In normal conditions, this period can be increased notably, and as a consequence
 
 ## User Manual
 
-:alert: Only in spanish! :alert:
+:warning: Only in spanish! :warning:
 
-There's available a full user manual of the CMS in [`doc/manual-ES/out/document.pdf`](doc/manual-ES/out/document.pdf)
+There's available a full user manual of the CMS in [`doc/manual-ES/out/document.pdf`](doc/manual-ES/out/document.pdf).
 
 ## Interior module
 
