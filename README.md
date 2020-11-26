@@ -1,15 +1,16 @@
 # Chana Monitoring System
 
 The *Chana Monitoring System (CMS)* is a home project for something as simple as controlling that a deposit of water does not overflow when an A/C system has been running unattended for long time.
-Since I already had the materials, it already contains a DHT22 sensor for measuring termperature and humidity.
+This is a clear example of overengineering when an engineer has the time and the will to learn new stuff :smile: .
+Since I already had the materials, it already uses a DHT22 sensor for measuring outdoors temperature and humidity.
 The CMS has been designed with three goals in mind:
 
-* The monitoring sensors must be cordless, able to be placed outdoors withoud requiring any wire directly connected to any device indoor.
-* The alarms and other messages must be displayed and ringed indoors, so that they can be noticed easily.
+* The monitoring sensors must be cordless, able to be placed outdoors without requiring any wire directly connected to any device indoor.
+* The alarms and other messages must be displayed and ringed indoors, so that they can be seen and heard easily.
 * Outdoors devices must run with unexpensive batteries for a relatively long period of time (weeks/months).
 
 In order to achieve this, the CMS has been built using two inexpensive NodeMCU v3 (ESP8266) microcontrollers, which are wifi capable.
-Each of theses microcontrollers have been used to create the *CMS interior module* and the *CMS exterior module*.
+Each of these microcontrollers have been used to create the *CMS interior module* and the *CMS exterior module*.
 They use MQTT to communicate with each other.
 
 ![Chan Monitoring System](doc/photos/chanams-front.jpg)
