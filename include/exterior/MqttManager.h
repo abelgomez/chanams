@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 #include <Arduino.h>
 #include "Sensors.h"
 #include "GlobalConstants.h"

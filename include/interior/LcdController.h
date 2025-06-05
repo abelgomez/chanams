@@ -3,6 +3,7 @@
 #define _TASK_OO_CALLBACKS
 
 #include "Switch.h"
+#include <string>
 #include <Arduino.h>
 #include <LiquidCrystal_I2C.h>
 #include <TaskSchedulerDeclarations.h>
